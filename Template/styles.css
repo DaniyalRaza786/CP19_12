@@ -1,18 +1,207 @@
 .top {
-margin-top:50px;
-height: 1000px;
-
+/*margin-top:50px;*/
+height:auto;
+background-color: beige
 
 }   
  .card {
-//padding:20px 20px;
 width:100%;
 height:auto;
 size:40%;
 overflow:hidden;
-margin-left:20px 20px 20px 20px;
+margin:10px 0px 10px 0px;
+background-color: white;
+padding: 8px;
+		 
  }	 
 .card-text {
 	line-height:1;
 	
+}
+.wrapper{
+	background-color: beige
+	
+}
+.container{background-color: beige}
+.rounded-circle{
+border-radius: 50%;
+height: 90px;
+width: 90px;
+}
+
+.avatar{
+	display: block;
+    margin-top: -60px;
+    overflow: hidden;
+    width: 95px;
+}
+.mx-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+.white{
+	background-color: white;
+}
+.tab-content.active {
+    display: block;
+}
+.tab-content.tab-pane {
+    display: none;
+}
+ .gedf-wrapper {
+            margin-top: 0.97rem;
+        }
+
+        @media (min-width: 992px) {
+            .gedf-main {
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
+            .gedf-card {
+                margin-bottom: 2.77rem;
+            }
+        }
+
+        /**Reset Bootstrap*/
+        /*.dropdown-toggle::after {
+            content: none;
+            display: none;*/
+       /* }*/
+.fade {
+    transition: opacity .15s linear;
+}
+.fade:not(.show) {
+    opacity: 0;
+}
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+.card-header-tabs {
+    margin-right: -.625rem;
+    margin-bottom: -.75rem;
+    margin-left: -.625rem;
+	border-bottom: 0;}
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+	border: 0;}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+	    cursor: default;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+textarea {
+    overflow: auto;
+    resize: vertical;
+	-webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
+}
+textarea {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+textarea {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+div {
+    display: block;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.pt-4, .py-4 {
+    padding-top: 1.5rem!important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.card1 {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.ul1 {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.li1 {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.card-body1 {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
 }
