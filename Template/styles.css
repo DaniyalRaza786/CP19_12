@@ -1,14 +1,18 @@
 .top {
 margin-top:50px;
 height: 1000px;
-background-color: aqua;
 
 
+}   
+ .card {
+//padding:20px 20px;
+width:100%;
+height:auto;
+size:40%;
+overflow:hidden;
+margin-left:20px 20px 20px 20px;
+ }	 
+.card-text {
+	line-height:1;
+	
 }
-.container{
-    margin-top:50px;
-    height: 1000px;
-    background-color: aqua;
-    
-    
-    }
