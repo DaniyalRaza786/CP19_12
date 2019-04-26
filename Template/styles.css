@@ -1,7 +1,12 @@
+body {
+background-color: #bdafaf40 !important;	
+}
+
 .top {
 /*margin-top:50px;*/
 height:auto;
-background-color: beige
+background-color:#bdafaf08;
+margin-top:40px;
 
 }   
  .card {
@@ -14,15 +19,19 @@ background-color: white;
 padding: 8px;
 		 
  }	 
-.card-text {
+.card-text, h4 {
 	line-height:1;
+	text-align: center;
+}
 	
 }
 .wrapper{
-	background-color: beige
+	background-color: gray;
 	
 }
-.container{background-color: beige}
+.container{
+background-color: #fdfdf7;
+} 
 .rounded-circle{
 border-radius: 50%;
 height: 90px;
@@ -202,6 +211,13 @@ button, input, optgroup, select, textarea {
 }
 .card-body1 {
     -ms-flex: 1 1 auto;
+}
+.alert-info {
+	color: #021119ed !important;
+    background-color: #74ccf9  !important;
+    border-color: #e1e5e6  !important;
+}
+}
     flex: 1 1 auto;
     padding: 1.25rem;
 }
