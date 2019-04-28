@@ -1,0 +1,132 @@
+.top {
+/*margin-top:50px;*/
+height:auto;
+background-color: beige
+
+}   
+ .card {
+width:100%;
+height:auto;
+size:40%;
+overflow:hidden;
+margin:10px 0px 10px 0px;
+background-color: white;
+padding: 8px;
+		 
+ }	 
+.card-text {
+	line-height:1;
+	
+}
+.wrapper{
+	background-color: beige
+	
+}
+.container{background-color: beige}
+.rounded-circle{
+border-radius: 50%;
+height: 90px;
+width: 90px;
+}
+
+.avatar{
+	display: block;
+    margin-top: -60px;
+    overflow: hidden;
+    width: 95px;
+}
+.mx-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+.white{
+	background-color: white;
+}
+.div-right{
+	
+	float: left;
+}
+/*.tab-content.active {
+    display: block;
+}*/
+/*.tab-content.tab-pane {
+    display: none;
+}*/
+ /*.gedf-wrapper {
+            margin-top: 0.97rem;
+        }
+
+        @media (min-width: 992px) {
+            .gedf-main {
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
+            .gedf-card {
+                margin-bottom: 2.77rem;
+            }
+        }*/
+
+        /**Reset Bootstrap*/
+        /*.dropdown-toggle::after {
+            content: none;
+            display: none;*/
+       /* }*/
+/*.fade {
+    transition: opacity .15s linear;
+}*/
+/*.fade:not(.show) {
+    opacity: 0;
+}*/
+/*.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}*/
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+/*.card-header-tabs {
+    margin-right: -.625rem;
+    margin-bottom: -.75rem;
+    margin-left: -.625rem;
+	border-bottom: 0;}*/
+/*.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}*/
+/*.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+	border: 0;}*/
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+	    cursor: default;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
