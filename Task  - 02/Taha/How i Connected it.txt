@@ -1,0 +1,2 @@
+To connect a simple .html file you just have to code in a .py file and then create a templates folder with that .py file and put your .html file in it.
+And where i have put "return render_template('page.html')" you just have tu put your html file name.

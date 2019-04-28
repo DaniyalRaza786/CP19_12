@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Form Demo</title>
+<style>
+.container{background-color: black;
+}
+.h1{
+    color: black;
+}
+Fieldset {
+float:left;
+padding:50px;
+background-color:#070606cc;;
+font-size:25px;
+color:white;
+}
+.form{
+padding:50px;
+float:left;
+margin-left:400px;
+}
+h1{
+text-align:center;
+color:white;
+}
+.form button{
+background-color:#1b32b7b5;;
+size:40px;
+padding: 14px 40px;
+width: 150px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-left: 47px;
+margin-top: 22px;
+color:white;
+border-radius: 22px;
+}
+
+input,select{
+padding:3px;
+font-size:inherit;
+ }
+</style>
+</head>
+<body>
+<div class='container'>
+<div class="form">
+<h1 class="h1"> Submit The Form below: </h1>
+<fieldset>
+<fieldset>
+ <legend>Customer </legend>
+Name: <input type="text " name="user name" length="20px" placeholder="Enter name"/> 
+<br/> <br/>
+Email: <input type="Email" name="email" length="20px" placeholder="Enter your email"/> 
+<br/> <br/>
+Investment:
+ <select length="40px"  >
+ <option></option>
+ <option>one</option>
+ <option>two</option>
+ <option>none</option>
+ </select>
+<br/> <br/>
+Date Joined: <input type="date" name="user name" length="20px"/> 
+<br/> <br/>
+Active: <input type="text " name="user name" size="2"/>
+<br/> <br/> 
+<div id="radio">
+<input type="radio" id="male" name="gender"> Male
+
+<input type="radio" id="female" name="gender">Female
+
+</div>
+
+
+</fieldset>
+<br/> <br/> 
+
+<button> OK </button>
+<button> Cancel </button>
+</fieldset>
+</div>
+</div>
+</body>
+</html>
