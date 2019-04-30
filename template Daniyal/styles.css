@@ -1,7 +1,7 @@
-.top {
+body {
 /*margin-top:50px;*/
 height:auto;
-background-color: beige
+background-color:#e8e0e029 !important;
 
 }   
  .card {
@@ -12,11 +12,23 @@ overflow:hidden;
 margin:10px 0px 10px 0px;
 background-color: white;
 padding: 8px;
+text-align: center;
+
 		 
- }	 
+ }	
+.alert-info {
+    color: #f9fbfb !important;
+    background-color: #1074a7 !important;
+    border-color: #0d7d94!important;
+} 
 .card-text {
 	line-height:1;
 	
+}
+.col-sm-7 {
+    width: 58.33333333%;
+    margin-top: 10px;
+	background-color: #f5efe7  !important;
 }
 .wrapper{
 	background-color: beige
@@ -129,4 +141,48 @@ label {
 }
 .form-group {
     margin-bottom: 1rem;
+}
+ #tohide{
+	visibility:hidden;
+	position:absolute;
+}
+.upload {
+background-color: #f9f4f40d;
+    //width: 90px;
+    height:42px;
+    color: #536ac1;
+    overflow: hidden;
+    margin-bottom: 0px;
+    bottom: 6;
+    position: absolute;
+    border: hidden;
+	display: block;
+	border: 1px solid transparent;
+	float: right;
+}
+.upload:hover {
+	background-color:#e7e7e7ba;
+	border-radius: 4px 4px 0 0;
+	border: 1px solid transparent;
+	color:#777;
+}
+.btn-group>.btn:first-child {
+    margin-left: 0;
+    margin: 10px 20px;
+}
+.btn btn-primary dropdown-toggle {
+    //float: left;
+	margin-left: 0;
+    margin: 10px 20px;
+}
+.dropdown, .dropup {
+    position: relative;
+    margin: 10px;
+    margin-left: -12px;
+}
+	
+	
+	
+	
+	
 }
