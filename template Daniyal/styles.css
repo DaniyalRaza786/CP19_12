@@ -27,14 +27,20 @@ text-align: center;
 }
 .col-sm-7 {
     width: 58.33333333%;
-    margin-top: 10px;
-	background-color: #f5efe7  !important;
+ 
+
 }
+/*.row{
+	
+	margin-top: 50px;
+}*/
 .wrapper{
-	background-color: beige
+	background-color: #e9ebee;
 	
 }
-.container{background-color: beige}
+.container{background-color: #e9ebee;
+margin-top: 50px;
+}
 .rounded-circle{
 border-radius: 50%;
 height: 90px;
@@ -214,6 +220,6 @@ background-color: #f9f4f40d;
     padding-inline-start: 10px;
 
 }	
-	
+
 	
 	
