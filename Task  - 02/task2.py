@@ -12,4 +12,4 @@ config = {
 
 firebase =pyrebase.initialize_app(config)
 db=firebase.database()
-db.child("names").push({"name":"Fahad"})c
+db.child("names").push({"name":"Fahad"})
