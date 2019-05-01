@@ -1,2 +1,2 @@
 # CP19_12
-we will create a admission form using python (flask)
+We will create Maju confession webpage using HTML/CSS , python (Flask) , Firebase Database
