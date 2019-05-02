@@ -1,2 +1,4 @@
 To connect a simple .html file you just have to code in a .py file and then create a templates folder with that .py file and put your .html file in it.
 And where i have put "return render_template('page.html')" you just have tu put your html file name.
+to run the code in your pc you have to make sure tu put the .py file having python coding with templates folder having .html file which have to be connect with the coding. 
+Now simply run the file where through anaconda promt.
