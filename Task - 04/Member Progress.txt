@@ -1,0 +1,7 @@
+Group Members Progress 
+
+Muhammad Daniyal Raza (Firebse Database)
+Taha Yamin (Connect Flask TO HTML/CSS and images)
+Sonia Suleman (Front End 40%)
+Fahad Khan (Front End 30%)
+lohan Zehra (Front End 30%)
