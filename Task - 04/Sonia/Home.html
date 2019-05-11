@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body  bgcolor="#EFE7C0">
+<div class="wrapper">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#337ab7;">
+<div class="container-fluid">
+  <div class="navbar-header">
+     <a class="navbar-brand " href="#">MDR</a>
+  </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a  href="#">Profile</a></li>
+      <li ><a href="#">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+
+    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    <li class="pi afb">
+                
+    <img class="us"  src="pic/1.jpg" style="width:40px; border-radius: 50%;" >
+             
+    </li>
+      
+    </ul>
+</div>
+</nav>
+        
+     <!--container   -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+           <div class="card">
+            <div class="card top">
+               <img class="card-img-top" src="pic/2.jpg" alt="Card image" style="width:100%; height: 40%;">
+               <div class="avatar mx-auto white">
+               <img src="pic/1.jpg" class="rounded-circle"
+          alt="Sample avatar image.">
+               </div>
+			</div>
+  
+             <div class="card-body"  style="width:100%; height: 60%;" >
+                 <h4 class="card-title focus text-center">Daniyal Raza</h4>
+                 <p class="card-text" >Some example text some example text. John Doe is an architect and engineer</p>
+                 <button  class="btn alert-info btn-group center-block"> See Profile</button>
+             </div>
+           </div>
+          </div>
+            <!--    col-sm-7-->
+     <div class="col-sm-7">
+           <div class="card">
+               <div class="card-header">
+               <ul class="nav nav-tabs card-header-tabs">
+               <li class="li1 nav-item">
+               <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">New Post</a>
+               </li>
+               <li class=" li1 nav-item">
+               <input type="file" id="tohide"/>
+			   <input type="button" value="Images" class="upload" onClick="document.getElementById('tohide').click()"/>
+               </li>
+                       			
+               </ul>
+                       		
+               </div>
+                      <!--///* 	card body*/-->
+                <div class="card-body">
+                  <textarea class="form-control" id="message" placeholder="What are you thinking?"></textarea>
+                       		
+                </div>
+                 <!--      	button-->
+                 <div class="btn-toolbar ">
+                     <div class="btn-group">
+                           <button type="submit" class="btn btn-primary">Share</button>
+                     </div>
+                  
+                  </div>
+                       		
+           </div>
+                       
+                                 <!--  card 2-->
+    <div class="card">
+       <div class="card-header">
+       <a  href="#">MDR</a>	
+       </div>
+                      <!--///* 	card body*/-->
+       <div class="card-body">
+       <textarea class="form-control"  disabled>helow world</textarea>
+                       		
+       </div>
+                 <!--      	button-->
+       <div class="status-bar">
+		<ul   class="like-com ul1">
+		<li>
+	    <a href="#"><i class="la la-heart"></i><img class="img-like" src="pic/heart.png" alt=""> Like</a>
+	    <span>25</span>
+		</li> 
+		<li><a href="#" title="" class="com"><img class="img-like" src="pic/commit.png" alt=""> Comment</a></li>
+		</ul>
+												
+	    </div>
+             
+             
+     <!--        Comment Box code Start-->
+        <div class="box-footer box-comments" style="display: block;">
+             <div class="box-comment">
+             <img class="img-circle img-sm" src="pic/2.jpg" alt="User Image">
+             <div class="comment-text">
+             <span class="username">
+              Taha
+             <span class="text-muted pull-right">8:03 PM Today</span>
+             </span>
+              sandjh dhfjdhfd sahdjhfd jsahddshf jsadsfd safdfbw
+             </div>
+             </div>
+             
+             
+             <div class="box-comment">
+             <img class="img-circle img-sm" src="pic/1.jpg" alt="User Image">
+             <div class="comment-text">
+             <span class="username">
+             Daniyal Raza
+             <span class="text-muted pull-right">8:03 PM Today</span>
+             </span>
+             ckdjoids hcdhfudw sdsyhfd hjdshfds ndhuifdsyfg jhudf
+             </div>
+             </div>
+       </div>
+                    
+       <div class="box-footer" style="display: block;">
+             <form action="#" method="post">
+                <img class="img-responsive img-circle img-sm" src="pic/1.jpg" alt="Alt Text">
+                 <div class="img-push">
+                    <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
+                 </div>
+             </form>
+      </div>
+                    
+           <!--         Comment BOx Coding ENd-->
+   </div><!-- cARD END-->
+   </div><!--COL M7 END-->
+
+ <div class="col-sm-2" style="background-color: lightgreen">.col-sm-3</div>
+
+    </div>
+   </div>
+   </div>
+  
+</body>
+</html>
