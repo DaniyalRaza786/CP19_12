@@ -8,4 +8,4 @@ def Taha():
 @app.route("/daniyal")
 def Daniyal():
     return "Hello Daniyal!"
-app.run()
+app.run(debug=True)
