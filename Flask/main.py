@@ -13,8 +13,6 @@ firebase = pyrebase.initialize_app(config)
 
 db = firebase.database()
 
-
-
 #from flask import Flask , render_template,*
 from flask import *
 app = Flask(__name__)
@@ -28,7 +26,7 @@ def hello():
         return render_template('Home.html',post=new.values())
     new_post=db.child("new_post").get()
     new=new_post.val()
-    return render_template('Home.html')
+    return render_template('Home.html',post=new.values())
 @app.route("/Taha")
 def Taha():
     return "Hello taha!"
