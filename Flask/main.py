@@ -14,7 +14,7 @@ firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 storage=firebase.storage()
 
-#from flask import Flask, render_template,*
+from flask import Flask , render_template,*
 from flask import *
 app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])

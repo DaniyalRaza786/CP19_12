@@ -12,4 +12,7 @@ def Taha():
 @app.route("/Daniyal")
 def Daniyal():
     return "Hello Daniyal"
+@app.route("/fahad")
+def fahad():
+    return "Hello fahad"
 app.run(debug=True)
