@@ -31,6 +31,10 @@ def hello():
              storage.child("image/new.jpg").put(images)
              link=storage.child("image").get_url(None)
              return render_template('Home.html',l=link)
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 53423ce13b8a8a8488ecac28f9b406ab30478887
     new_post=db.child("new_post").get()
     new=new_post.val()
     link=storage.child("image/new1.jpg").get_url(None)
