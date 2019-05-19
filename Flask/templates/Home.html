@@ -90,7 +90,70 @@
            </div>
           </form> 
          
+                                 <!--  card 2 for image-->
+       
+          <div class="card">
+              <div class="card-header">
+              <a  href="#">MDR</a>	
+              </div>
+                              <!--///* 	card body*/-->
+              <div class="card-body">
+                  <img class="post-img" src="{{l}}" alt="" height="400px" width="100%">
+         
+              
+                          
+              </div>
+                        <!--      	button-->
+              <div class="status-bar">
+            <ul   class="like-com ul1">
+            <li>
+              <a href="#"><i class="la la-heart"></i><img class="img-like" src="{{url_for('static',filename='pic/heart.png')}}" alt=""> Like</a>
+              <span>25</span>
+            </li> 
+            <li><a href="#" title="" class="com"><img class="img-like" src="{{url_for('static',filename='pic/commit.png')}}" alt=""> Comment</a></li>
+            </ul>
                                 
+              </div>
+                    
+                    
+            <!--        Comment Box code Start-->
+                <div class="box-footer box-comments" style="display: block;">
+                    <div class="box-comment">
+                    <img class="img-circle img-sm" src="{{url_for('static',filename='pic/3.jpg')}}" alt="User Image">
+                    <div class="comment-text">
+                    <span class="username">
+                      Taha
+                    <span class="text-muted pull-right">8:03 PM Today</span>
+                    </span>
+                      sandjh dhfjdhfd sahdjhfd jsahddshf jsadsfd safdfbw
+                    </div>
+                    </div>
+                    
+                    
+                    <div class="box-comment">
+                    <img class="img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="User Image">
+                    <div class="comment-text">
+                    <span class="username">
+                    Daniyal Raza
+                    <span class="text-muted pull-right">8:03 PM Today</span>
+                    </span>
+                    ckdjoids hcdhfudw sdsyhfd hjdshfds ndhuifdsyfg jhudf
+                    </div>
+                    </div>
+              </div>
+                            
+              <div class="box-footer" style="display: block;">
+                    <form action="#" method="post">
+                        <img class="img-responsive img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="Alt Text">
+                        <div class="img-push">
+                            <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
+                        </div>
+                    
+              </div>
+            </form>          
+                  <!--         Comment BOx Coding ENd-->
+          </div><!-- cARD END-->
+
                                  <!--  card 2-->
    {% for i in post %}
       <div class="card">
