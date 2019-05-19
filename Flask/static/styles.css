@@ -269,5 +269,9 @@ background-color: #f9f4f40d;
 .pull-right {
     float: right!important;
 }
+.post-img {
+    image-rendering: auto  
+    
+}
 	
 	

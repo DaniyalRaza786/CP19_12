@@ -54,6 +54,7 @@
           </div>
             <!--    col-sm-7-->
      <div class="col-sm-7">
+        <form action="/" method="POST" enctype="multipart/form-data">
            <div class="card">
                <div class="card-header">
                <ul class="nav nav-tabs card-header-tabs">
@@ -61,7 +62,7 @@
                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">New Post</a>
                </li>
                <li class=" li1 nav-item">
-               <input type="file" id="tohide"/>
+               <input type="file" name='picture' id="tohide"/>
 			   <input type="button" value="Images" class="upload" onClick="document.getElementById('tohide').click()"/>
                </li>
                        			
@@ -69,7 +70,7 @@
                        		
                </div>
                       <!--///* 	card body*/-->
-                      <form action="/" method="POST">
+                      
                 <div class="card-body">
                    
                   <textarea class="form-control" id="message" placeholder="What are you thinking?"name="feed"></textarea>
@@ -87,7 +88,9 @@
                   </div>
                        		
            </div>
-          </form>      
+          </form> 
+         
+                                
                                  <!--  card 2-->
    {% for i in post %}
       <div class="card">
