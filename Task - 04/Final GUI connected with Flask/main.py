@@ -5,14 +5,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return 'Hello World'
+    return render_template('Home.html')
 @app.route("/Taha")
 def Taha():
     return "Hello taha!"
-@app.route("/Daniyal")
-def Daniyal():
-    return "Hello Daniyal"
-@app.route("/fahad")
-def fahad():
-    return "Hello fahad"
 app.run(debug=True)
