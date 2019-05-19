@@ -12,23 +12,27 @@ config={
 firebase = pyrebase.initialize_app(config)
 
 db = firebase.database()
+storage=firebase.storage()
 
-
-
-#from flask import Flask , render_template,*
+#from flask import Flask, render_template,*
 from flask import *
 app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])
 def hello():
     if request.method=='POST':
         name=request.form['feed']
-        db.child("new_post").push(name)
-        new_post=db.child("new_post").get()
-        new=new_post.val()
-        return render_template('Home.html',post=new.values())
+        images=request.files['picture']
+        if name != "":
+             db.child("new_post").push(name)
+             new_post=db.child("new_post").get()
+             new=new_post.val()
+             return render_template('Home.html',post=new.values())
+        
     new_post=db.child("new_post").get()
     new=new_post.val()
-    return render_template('Home.html')
+    link=storage.child("image/new1.jpg").get_url(None)
+    return render_template('Home.html',post=new.values(),l=link)
+    
 @app.route("/Taha")
 def Taha():
     return "Hello taha!"
