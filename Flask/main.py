@@ -16,29 +16,42 @@ storage=firebase.storage()
 
 #from flask import Flask , render_template,*
 from flask import *
+from datetime import date
 app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])
 def hello():
     if request.method=='POST':
         name=request.form['feed']
         images=request.files['picture']
+        
+        
         if name != "":
-             db.child("new_post").push(name)
+             db.child("new_post").push({"post":name})
              new_post=db.child("new_post").get()
              new=new_post.val()
              return render_template('Home.html',post=new.values())
         if images != "":
-             storage.child("image/new.jpg").put(images)
-             link=storage.child("image").get_url(None)
+             storage.child("image/new2.jpg").put(images)
+             link=storage.child("image/new2.jpg").get_url(None)
              return render_template('Home.html',l=link)
-<<<<<<< HEAD
-=======
-        
->>>>>>> 53423ce13b8a8a8488ecac28f9b406ab30478887
     new_post=db.child("new_post").get()
     new=new_post.val()
-    link=storage.child("image/new1.jpg").get_url(None)
+    link=storage.child("image/new2.jpg").get_url(None)
     return render_template('Home.html',post=new.values(),l=link)
+@app.route('/comment', methods=['GET','POST'])
+def comments():
+    if request.method=='POST':
+        comment=request.form['comment']
+        if comment != "":
+            
+            db.child("comment").push({"new_comment":comment})
+            new_comment=db.child("comment").get()
+            new=new_comment.val()
+            return render_template('Home.html',comment=new.values())
+    new_post=db.child("new_post").get()
+    new=new_post.val()
+    link=storage.child("image/new2.jpg").get_url(None)
+    return render_template('Home.html',post=new.values(),l=link)  
     
 @app.route("/Taha")
 def Taha():
