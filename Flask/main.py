@@ -43,6 +43,7 @@ def comments():
     if request.method=='POST':
         comment=request.form['comment']
         if comment != "":
+<<<<<<< HEAD
             today = date.today()
             db.child("comment").push({"new_comment":comment,"date":today})
             new_comment=db.child("comment").get()
@@ -54,6 +55,17 @@ def comments():
     new_comment=db.child("comment").get()
     new_comment_post=new_comment.val()
     return render_template('Home.html',post=new.values(),l=link,new_comment_post=new_comment_post.values())  
+=======
+            
+            db.child("comment").push({"new_comment":comment})
+            new_comment=db.child("comment").get()
+            new=new_comment.val()
+            return render_template('Home.html',comment=new.values())
+    new_post=db.child("new_post").get()
+    new=new_post.val()
+    link=storage.child("image/new2.jpg").get_url(None)
+    return render_template('Home.html',post=new.values(),l=link)  
+>>>>>>> 5dea821da23027f196959d08e8819293f6ca2f20
     
 @app.route("/Taha")
 def Taha():
