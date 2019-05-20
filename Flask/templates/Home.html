@@ -53,12 +53,6 @@
           </div>
             <!--    col-sm-7-->
      <div class="col-sm-7">
-<<<<<<< HEAD
-        <form action="/image" method="POST" enctype="multipart/form-data">
-           <div class="card">
-               <div class="card-header">
-               
-=======
         <form action="/" method="POST" enctype="multipart/form-data">
            <div class="card">
                <div class="card-header">
@@ -72,21 +66,20 @@
                </li>
                        			
                </ul>
->>>>>>> 5dea821da23027f196959d08e8819293f6ca2f20
                        		
                </div>
                       <!--///* 	card body*/-->
                       
                 <div class="card-body">
                    
-                  <input type="file" value="Images" class="form-control" name="up_image" />
+                  <textarea class="form-control" id="message" placeholder="What are you thinking?"name="feed"></textarea>
                        		
                 </div>
                  <!--      	button-->
                  <div class="btn-toolbar ">
                      <div class="btn-group">
                        
-                           <button type="submit" class="btn btn-primary" name="upload_image">Image Upload</button>
+                           <button type="submit" class="btn btn-primary" name="share_post">Share</button>
                           
                           </div>
 
@@ -95,17 +88,20 @@
                        		
            </div>
           </form> 
-<<<<<<< HEAD
 
-<!--      	card for post upload-->
-          <form action="/" method="POST" enctype="multipart/form-data">
+   <!--  card 2 for post-->
+
+          <form action="/post" method="POST" enctype="multipart/form-data">
             <div class="card">
                 <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                 <li class="li1 nav-item">
                 <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">New Post</a>
                 </li>
-                
+                <li class=" li1 nav-item">
+                <input type="file" name='picture' id="tohide"/>
+          <input type="button" value="Images" class="upload" onClick="document.getElementById('tohide').click()"/>
+                </li>
                               
                 </ul>
                             
@@ -130,8 +126,6 @@
                             
             </div>
            </form> 
-=======
->>>>>>> 5dea821da23027f196959d08e8819293f6ca2f20
          
                                  <!--  card 2 for image-->
        
