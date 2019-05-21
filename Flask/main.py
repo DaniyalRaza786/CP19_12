@@ -76,4 +76,8 @@ def image():
 @app.route("/Taha")
 def Taha():
     return "Hello taha!"
+
+@app.route('/about', methods=['GET','POST'])
+def about():
+	return render_template('about.html')
 app.run(debug=True)
