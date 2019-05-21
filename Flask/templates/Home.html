@@ -34,41 +34,37 @@
           </div>
             <!--    col-sm-7-->
      <div class="col-sm-7">
-        <form action="/" method="POST" enctype="multipart/form-data">
+        
            <div class="card">
+              <form action="/image" method="POST" enctype="multipart/form-data">
                <div class="card-header">
-               <ul class="nav nav-tabs card-header-tabs">
-               <li class="li1 nav-item">
-               <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">New Post</a>
-               </li>
-               <li class=" li1 nav-item">
-               <input type="file" name='picture' id="tohide"/>
-			   <input type="button" value="Images" class="upload" onClick="document.getElementById('tohide').click()"/>
-               </li>
-                       			
-               </ul>
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="li1 nav-item">
+                  <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Upload Image </a>
+                  </li>
+                  </ul>
                        		
                </div>
                       <!--///* 	card body*/-->
                       
                 <div class="card-body">
                    
-                  <textarea class="form-control" id="message" placeholder="What are you thinking?"name="feed"></textarea>
+                  <input type="file" class="form-control" name="picture" />
                        		
                 </div>
                  <!--      	button-->
                  <div class="btn-toolbar ">
                      <div class="btn-group">
                        
-                           <button type="submit" class="btn btn-primary" name="share_post">Share</button>
+                           <button type="submit" class="btn btn-primary" name="upload_image">Upload Image</button>
                           
                           </div>
 
                   
                   </div>
-                       		
+                </form>   		
            </div>
-          </form> 
+          
 
    <!--  card 2 for post-->
 
@@ -79,10 +75,7 @@
                 <li class="li1 nav-item">
                 <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">New Post</a>
                 </li>
-                <li class=" li1 nav-item">
-                <input type="file" name='picture' id="tohide"/>
-          <input type="button" value="Images" class="upload" onClick="document.getElementById('tohide').click()"/>
-                </li>
+                
                               
                 </ul>
                             
@@ -208,11 +201,11 @@
                 Taha
               <span class="text-muted pull-right">8:03 PM Today</span>
               </span>
-                sandjh dhfjdhfd sahdjhfd jsahddshf jsadsfd safdfbw
+                NICE
               </div>
               </div>
               
-      {% for j in new_comment_post %}
+        {% for j in new_comment_post1 %}
               <div class="box-comment">
               <img class="img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="User Image">
               <div class="comment-text">
@@ -220,10 +213,10 @@
               Daniyal Raza
               <span class="text-muted pull-right">8:03 PM Today</span>
               </span>
-           {{j}}
+            {{j}}
               </div>
               </div>
-      {% endfor %}
+        {% endfor %}
         </div>
                       
         <div class="box-footer" style="display: block;">

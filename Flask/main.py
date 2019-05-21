@@ -20,51 +20,58 @@ from datetime import date
 app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])
 def hello():
+        
+    new_post=db.child("new_post").get()
+    new=new_post.val()
+    link=storage.child("image/new2.jpg").get_url(None)
+    new_comment=db.child("comment").get()
+    new_comment_post=new_comment.val()
+    return render_template('Home.html',post=new.values(),l=link,new_comment_post1=new_comment_post.values())  
+@app.route('/post', methods=['GET','POST'])
+def post():
     if request.method=='POST':
         name=request.form['feed']
         
         
         if name != "":
-             db.child("new_post").push({"post":name})
+             db.child("new_post").push(name)
              new_post=db.child("new_post").get()
-             new=new_post.val()
-             return render_template('Home.html',post=new.values())
+             
         
-    new_post=db.child("new_post").get()
-    new=new_post.val()
-    link=storage.child("image/new2.jpg").get_url(None)
-    return render_template('Home.html',post=new.values(),l=link)
+        new_post=db.child("new_post").get()
+        new=new_post.val()
+        link=storage.child("image/new2.jpg").get_url(None)
+        new_comment=db.child("comment").get()
+        new_comment_post=new_comment.val()
+        return render_template('Home.html',post=new.values(),l=link,new_comment_post1=new_comment_post.values())  
 @app.route('/comment', methods=['GET','POST'])
 def comments():
     if request.method=='POST':
         comment=request.form['comment']
         if comment != "":
-            today = date.today()
-            db.child("comment").push({"new_comment":comment,"date":today})
-            new_comment=db.child("comment").get()
-            new_comment_post=new_comment.val()
-            return render_template('Home.html',new_comment_post=new_comment_post.values())
-    new_post=db.child("new_post").get()
-    new=new_post.val()
-    link=storage.child("image/new2.jpg").get_url(None)
-    new_comment=db.child("comment").get()
-    new_comment_post=new_comment.val()
-    return render_template('Home.html',post=new.values(),l=link,new_comment_post=new_comment_post.values())  
+            
+            db.child("comment").push(comment)
+              
+        new_post=db.child("new_post").get()
+        new=new_post.val()
+        link=storage.child("image/new2.jpg").get_url(None)
+        new_comment=db.child("comment").get()
+        new_comment_post=new_comment.val()
+        return render_template('Home.html',post=new.values(),l=link,new_comment_post1=new_comment_post.values())  
 
 @app.route('/image', methods=['GET','POST'])
 def image():
     if request.method=='POST':
-        images=request.form['u_image']
+        images=request.files['picture']
         if images != "":
              storage.child("image/new2.jpg").put(images)
-             link=storage.child("image/new2.jpg").get_url(None)
-             return render_template('Home.html',l=link)
-    new_post=db.child("new_post").get()
-    new=new_post.val()
-    link=storage.child("image/new2.jpg").get_url(None)
-    new_comment=db.child("comment").get()
-    new_comment_post=new_comment.val()
-    return render_template('Home.html',post=new.values(),l=link,new_comment_post=new_comment_post.values())
+             
+        new_post=db.child("new_post").get()
+        new=new_post.val()
+        link=storage.child("image/new2.jpg").get_url(None)
+        new_comment=db.child("comment").get()
+        new_comment_post=new_comment.val()
+        return render_template('Home.html',post=new.values(),l=link,new_comment_post1=new_comment_post.values())
     
 @app.route("/Taha")
 def Taha():
