@@ -6,8 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap/css/bootstrap.min.css')}}">
 	<script type="text/javascript" src="{{url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
 	
-	<link rel="stylesheet" href="{{url_for('https://www.w3schools.com/w3css/4/w3.css')}}">
-   <link rel="stylesheet" href="{{url_for('https://www.w3schools.com/lib/w3-theme-blue-grey.css')}}">
+	<link rel="stylesheet" href='https://www.w3schools.com/w3css/4/w3.css'>
+   <link rel="stylesheet" href='https://www.w3schools.com/lib/w3-theme-blue-grey.css'>
 
 </head>
 <body  bgcolor="#EFE7C0">
@@ -237,12 +237,12 @@
    {% endfor%} 
    </div><!--COL M7 END-->
 <!-- Right Column -->
- <!-- <div class="col-sm-2" style="background-color: lightgray"> --> 
+<div class="col-sm-2" style="background-color: lightgray"></div>
    <div class="w3-col m2"> 
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
           <p>Upcoming Events:</p>
-          <img src="ooop.jpg" alt="Forest" style="width:100%;">
+          <img src="{{url_for('static',filename='pic/ooop.jpg')}}" alt="Forest" style="width:100%;">
           <p><strong>Holiday</strong></p>
           <p>Friday 15:00</p>
           <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
@@ -251,6 +251,7 @@
       <br> 
 	 
 </div>
+<<<<<<< HEAD
 <!--  </div> -- >
 
 
@@ -382,6 +383,16 @@
 
 </footer>
 <!-- Footer end here -->
+=======
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+>>>>>>> d02fbb30a0974a3da40ce0f4a86d020ea37c76a9
 
 </body>
 </html>
