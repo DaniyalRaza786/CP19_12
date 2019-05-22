@@ -6,11 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap/css/bootstrap.min.css')}}">
 	<script type="text/javascript" src="{{url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
 	
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	
 	<link rel="stylesheet" href='https://www.w3schools.com/w3css/4/w3.css'>
    <link rel="stylesheet" href='https://www.w3schools.com/lib/w3-theme-blue-grey.css'>
 
 </head>
-<body  bgcolor="#EFE7C0">
+<body  bgcolor="#f1f1f1!important;" style="font-family:Verdana, sans-serif !important;">
     
 <div class="wrapper">
     {% include "nav.html" %}
@@ -22,27 +24,29 @@
         <div class="col-sm-3">
            <div class="card">
             <div class="card top">
-               <img class="card-img-top" src="{{url_for('static',filename='pic/3.jpg')}}" alt="Card image" style="width:100%; height: 40%;">
+               <img class="card-img-top" src="{{url_for('static',filename='pic/architect.jpg')}}" alt="Card image" style="width:100%; height: 40%;">
                <div class="avatar mx-auto white">
-               <img src="{{url_for('static',filename='pic/1.jpg')}}" class="rounded-circle"  alt="Sample avatar image.">
+               <img src="{{url_for('static',filename='pic/pro.png')}}" class="rounded-circle"  alt="Sample avatar image.">
                </div>
 			</div>
   
              <div class="card-body"  style="width:100%; height: 60%;" >
                  <h4 class="card-title focus text-center">Daniyal Raza</h4>
-                 <p class="card-text" >Some example text some example text. Daniyal Raza is an architect and engineer</p>
-                 <button  class="btn alert-info btn-group center-block"> See Profile</button>
+                 <p class="card-text"style="text-align:center;" >Some example text some example text. Daniyal Raza is an architect and engineer</p>
+                 <button  class="btn  btn-group center-block" style="background-color:#666699; color:white"> See Profile</button>
              </div>
            </div>
           </div>
             <!--    col-sm-7-->
-     <div class="col-sm-7">
+			
+			
+     <div class="col-sm-6">
         
            <div class="card">
               <form action="/image" method="POST" enctype="multipart/form-data">
                <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
-                  <li class="li1 nav-item">
+                  <li class="li1 nav-item ">
                   <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Upload Image </a>
                   </li>
                   </ul>
@@ -59,7 +63,7 @@
                  <div class="btn-toolbar ">
                      <div class="btn-group">
                        
-                           <button type="submit" class="btn btn-primary" name="upload_image">Upload Image</button>
+                           <button type="submit" class="btn btn-primary " name="upload_image"style="background-color:#666699;">Upload Image</button>
                           
                           </div>
 
@@ -94,7 +98,7 @@
                   <div class="btn-toolbar ">
                       <div class="btn-group">
                         
-                            <button type="submit" class="btn btn-primary" name="share_post">Share</button>
+                            <button type="submit" class="btn btn-primary" name="share_post"style="background-color:#666699;">Share</button>
                            
                            </div>
  
@@ -108,7 +112,7 @@
        
           <div class="card">
               <div class="card-header">
-              <a  href="#">MDR</a>	
+              <a  href="#">MUHAMMAD ALI JINNAH UNIVERSITY</a>	
               </div>
                               <!--///* 	card body*/-->
               <div class="card-body">
@@ -121,10 +125,10 @@
               <div class="status-bar">
             <ul   class="like-com ul1">
             <li>
-              <a href="#"><i class="la la-heart"></i><img class="img-like" src="{{url_for('static',filename='pic/heart.png')}}" alt=""> Like</a>
+              <a href="#"><i class="la la-heart "></i><img class="img-like" src="{{url_for('static',filename='pic/heart.png')}}" alt=""> Like</a>
               <span>25</span>
             </li> 
-            <li><a href="#" title="" class="com"><img class="img-like" src="{{url_for('static',filename='pic/commit.png')}}" alt=""> Comment</a></li>
+            <li><a href="#" title="" class="com "><img class="img-like" src="{{url_for('static',filename='pic/commit.png')}}" alt=""> Comment</a></li>
             </ul>
                                 
               </div>
@@ -156,9 +160,9 @@
                     </div>
               </div>
                             
+                  <img class="img-responsive img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="Alt Text">
               <div class="box-footer" style="display: block;">
                 <form action="/comment" method="POST">
-                  <img class="img-responsive img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="Alt Text">
                   <div class="img-push">
                       <input type="text" class="form-control input-sm" placeholder="Press enter to post comment" name="comment">
                   </div>
@@ -172,7 +176,7 @@
    {% for i in post %}
       <div class="card">
         <div class="card-header">
-        <a  href="#">MDR</a>	
+        <a  href="#">MUHAMMAD ALI JINNAH UNIVERSITY</a>	
         </div>
                         <!--///* 	card body*/-->
         <div class="card-body">
@@ -234,32 +238,52 @@
                 
             <!--         Comment BOx Coding ENd-->
     </div><!-- cARD END-->
+
    {% endfor%} 
    </div><!--COL M7 END-->
 <!-- Right Column -->
-<div class="col-sm-2" style="background-color: lightgray"></div>
-   <div class="w3-col m2"> 
+
+   <div class="w3-col m3" style="margin-top:11px"> 
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
-          <p>Upcoming Events:</p>
-          <img src="{{url_for('static',filename='pic/ooop.jpg')}}" alt="Forest" style="width:100%;">
+		<span class="text-muted"></span>
+          <h4>Upcoming Events:</h4>
+          <img src="{{url_for('static',filename='pic/tod.png')}}" alt="Forest" style="width:100%;">
           <p><strong>Holiday</strong></p>
           <p>Friday 15:00</p>
-          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+          <p><button class="w3-button w3-block " style="background-color:#666699; color:white; ">Read More</button></p>
         </div>
       </div>
       <br> 
 	 
 </div>
-<<<<<<< HEAD
+
+   <div class="w3-col m3" style="margin-top:11px"> 
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+		<span class="text-muted">Sponsor</span>
+          <h4>Best institutes around you!:</h4>
+          <img src="{{url_for('static',filename='pic/401.jpg')}}" alt="Forest" style="width:100%;">
+          <p><strong>The Edducators</strong></p>
+          <p> From Friday 15:00 to Sunday</p>
+          <p><button class="w3-button w3-block " style="background-color:#666699; color:white; ">Load more </button></p>
+        </div>
+      </div>
+      <br> 
+	 
+</div>
+
+</div>
+</div>
+
 <!--  </div> -- >
 
 
 <!-- Footer start from here -->
-<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+<footer class="page-footer font-small mdb-color lighten-3 pt-4"style="background-color:#666699; color:white;">
 
   <!-- Footer Links -->
-  <div class="container text-center text-md-left">
+  <div class="container text-center text-md-left"style="background-color:#666699;">
 
     <!-- Grid row -->
     <div class="row">
@@ -268,7 +292,7 @@
       <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+        <h4 class="font-weight-bold text-uppercase mb-4">Footer Content</h4>
         <p>Here you can use rows and columns to organize your footer content.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate
           esse
@@ -277,10 +301,10 @@
       </div>
       <!-- Grid column -->
 
-      <hr class="clearfix w-100 d-md-none">
+     
 
       <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1" >
 
         <!-- Links -->
         <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
@@ -288,22 +312,22 @@
         <ul class="list-unstyled">
           <li>
             <p>
-              <a href="#!">PROJECTS</a>
+              <a href="#!" style="color:white;">PROJECTS</a>
             </p>
           </li>
           <li>
             <p>
-              <a href="#!">ABOUT US</a>
+              <a href="#!" style="color:white;">ABOUT US</a>
             </p>
           </li>
           <li>
             <p>
-              <a href="#!">BLOG</a>
+              <a href="#!" style="color:white;">BLOG</a>
             </p>
           </li>
           <li>
             <p>
-              <a href="#!">AWARDS</a>
+              <a href="#!"  style="color:white;">AWARDS</a>
             </p>
           </li>
         </ul>
@@ -311,7 +335,7 @@
       </div>
       <!-- Grid column -->
 
-      <hr class="clearfix w-100 d-md-none">
+     
 
       <!-- Grid column -->
       <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
@@ -326,12 +350,12 @@
           </li>
           <li>
             <p>
-              <i class="fas fa-envelope mr-3"></i> mohammadalijinnah@gmai.com</p>
+              <i class="fas fa-envelope mr-3"></i> mohammadalijinnah@gmail.com</p>
           </li>
           <li>
             <p>
               <i class="fas fa-phone mr-3"></i> + 92 234 567 88</p>
-          </li>
+			</li>
           <li>
             <p>
               <i class="fas fa-print mr-3"></i> + 92 234 567 89</p>
@@ -341,29 +365,28 @@
       </div>
       <!-- Grid column -->
 
-      <hr class="clearfix w-100 d-md-none">
-
+     
       <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+      <div class="col-md-2 col-lg-3 text-center mx-auto my-4">
 
         <!-- Social buttons -->
         <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
 
         <!-- Facebook -->
-        <a type="button" class="btn-floating btn-fb">
-          <i class="fab fa-facebook-f"></i>
+        <a  href="" class="btn-floating btn-fb">
+          <i class='fab fa-facebook-square' style='font-size:48px;color: #0047ff'></i>
         </a>
         <!-- Twitter -->
-        <a type="button" class="btn-floating btn-tw">
-          <i class="fab fa-twitter"></i>
+        <a  href="" class="btn-floating ">
+          <i class="fab fa-twitter" style="font-size:48px;color: #0891f0;"></i>
         </a>
         <!-- Google +-->
-        <a type="button" class="btn-floating btn-gplus">
-          <i class="fab fa-google-plus-g"></i>
+        <a  href="" class="btn-floating btn-gplus">
+          <i class="fab fa-google-plus-g" style="font-size:48px;color:darkorange;"></i>
         </a>
         <!-- Dribbble -->
-        <a type="button" class="btn-floating btn-dribbble">
-          <i class="fab fa-dribbble"></i>
+        <a href="" class="btn-floating btn-dribbble">
+          <i class="fab fa-instagram" style="font-size:44px;color: #ff128a;"></i>
         </a>
 
       </div>
@@ -377,22 +400,20 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MAJU.com</a>
+    <a href="https://mdbootstrap.com/education/bootstrap/" style="color:white;"> MAJU.com</a>
   </div>
   <!-- Copyright -->
 
 </footer>
-<!-- Footer end here -->
-=======
-</div>
-</div>
-</div>
-</div>
+<!-- Footer end here -->`
 </div>
 
 
 
->>>>>>> d02fbb30a0974a3da40ce0f4a86d020ea37c76a9
+
+
+
+
 
 </body>
 </html>
