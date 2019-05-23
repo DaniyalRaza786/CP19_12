@@ -278,6 +278,8 @@ background-color: #666699;
 a{
 	color:#666699;
 }
-
+.navbar a:hover {
+	color:black;
+}
 	
 	
