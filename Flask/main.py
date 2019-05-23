@@ -81,3 +81,9 @@ def Taha():
 def about():
 	return render_template('about.html')
 app.run(debug=True)
+
+@app.route('/event', methods=['GET','POST'])
+def event():
+	return render_template('event.html')
+app.run(debug=True)
+
