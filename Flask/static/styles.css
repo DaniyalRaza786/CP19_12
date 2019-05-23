@@ -278,6 +278,15 @@ background-color: #666699;
 a{
 	color:#666699;
 }
+body,h1 {font-family: Verdana, sans-serif}
 
+body, html {height: 100%}
+
+.bgimg {
+  background-image:url('pic/come.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
 	
 	
