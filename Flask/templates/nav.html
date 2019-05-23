@@ -6,10 +6,20 @@
         <script type="text/javascript" src="{{url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
 
 <title></title>
+<style>
+.navbar navbar-inverse a:hover{
+color: black !important;
+
+}
+.nav navbar-nav a:hover{
+color: black !important;
+
+}
+</style>
 </head>
 <body bgcolor="#EFE7C0">
         
-                <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#666699; color:white !important; text-align:center !important; a:hover{color:black;}">
+                <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#666699; color:white !important; text-align:center !important;">
                 <div class="container-fluid">
                   <div class="navbar-header">
                      <a class="navbar-brand " href="{{url_for('hello')}}" style="background-color:#666699; color:white !important;">MAJU</a>
