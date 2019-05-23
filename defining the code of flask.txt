@@ -1,0 +1,34 @@
+for using flask first we have to install it by typing 
+"pip install flask" in cmd or in anaconda prompt
+
+
+once we have installed the flask, every time u want to run it the basic thing is to write
+"import flask"
+
+
+but this will not work with templates of bootstrap, for working with that we simply have to write
+"from flask import Flask, render_template" or "from flask import *" the "*" will import everthing that the flask library have in it self.
+
+
+now create an "app" variable and assign it with function having perameter "Flask(__name__)"
+app=Flask(__name__)
+
+
+The route() decorator in Flask is used to bind URL to a function. For example -
+@app.route(‘/hello’)
+def hello_world():
+   return ‘hello world’
+Here, URL ‘/hello’ rule is bound to the hello_world() function. As a result, if a user visits http://localhost:5000/hello URL,
+the output of the hello_world() function will be rendered in the browser.
+
+
+the return function basically return the thing we want display 
+return render_template('Home.html')
+it will return the page home.html
+
+their should be a templates folder in same folder in which the coding is. the html file will be in that templates folder.
+
+the html file will be simple no css or pictures would be connected with it. if we want to connect it with them a folder will be made naming static.
+the html file and the other files in another folder will be connect with each other through Jinja templating.
+
+ 
