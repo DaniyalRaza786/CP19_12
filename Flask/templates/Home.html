@@ -8,8 +8,8 @@
 	
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	
-	<link rel="stylesheet" href='https://www.w3schools.com/w3css/4/w3.css'>
-   <link rel="stylesheet" href='https://www.w3schools.com/lib/w3-theme-blue-grey.css'>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
 
 </head>
 <body  bgcolor="#f1f1f1!important;" style="font-family:Verdana, sans-serif !important;">
@@ -31,13 +31,18 @@
 			</div>
   
              <div class="card-body"  style="width:100%; height: 60%;" >
+<<<<<<< HEAD
+                 <h4 class="card-title focus text-center">Daniyal Raza</h4>
+                 <p class="card-text"  style="text-align:center;" >Some example text some example text. Daniyal Raza is an architect and engineer</p>
+=======
                  <h4 class="card-title focus text-center">MAJU USER</h4>
                  <p class="card-text"style="text-align:center;" >Post your confessions,your info will be hidden.</p>
+>>>>>>> 353283c6a6fa4f0ca97d8a30e2ff70256aef4e5c
                  <button  class="btn  btn-group center-block" style="background-color:#666699; color:white"> See Profile</button>
              </div>
            </div>
           </div>
-            <!--    col-sm-7-->
+            <!--    col-sm-6-->
 			
 			
      <div class="col-sm-6">
@@ -63,7 +68,7 @@
                  <div class="btn-toolbar ">
                      <div class="btn-group">
                        
-                           <button type="submit" class="btn btn-primary " name="upload_image"style="background-color:#666699;">Upload Image</button>
+                           <button type="submit" class="btn btn-primary " name="upload_image" style="background-color:#666699;">Upload Image</button>
                           
                           </div>
 
@@ -80,7 +85,7 @@
                 <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                 <li class="li1 nav-item">
-                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">New Post</a>
+                <a class="nav-link active"  data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">New Post</a>
                 </li>
                 
                               
@@ -91,14 +96,14 @@
                        
                  <div class="card-body">
                     
-                   <textarea class="form-control" id="message" placeholder="What are you thinking?"name="feed"></textarea>
+                   <textarea class="form-control" id="message" placeholder="What are you thinking?" name="feed"></textarea>
                             
                  </div>
                   <!--      	button-->
                   <div class="btn-toolbar ">
                       <div class="btn-group">
                         
-                            <button type="submit" class="btn btn-primary" name="share_post"style="background-color:#666699;">Share</button>
+                            <button type="submit" class="btn btn-primary" name="share_post" style="background-color:#666699;">Share</button>
                            
                            </div>
  
@@ -143,11 +148,16 @@
                       Taha
                     <span class="text-muted pull-right">8:03 PM Today</span>
                     </span>
+<<<<<<< HEAD
+                      Beautiful
+=======
                       Nice Post
+>>>>>>> 353283c6a6fa4f0ca97d8a30e2ff70256aef4e5c
                     </div>
                     </div>
                     
-                    
+                
+              {% for j in new_comment_post1 %}
                     <div class="box-comment">
                     <img class="img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="User Image">
                     <div class="comment-text">
@@ -155,23 +165,30 @@
                     Daniyal Raza
                     <span class="text-muted pull-right">8:03 PM Today</span>
                     </span>
+<<<<<<< HEAD
+                  {{j}}
+=======
                     wow what a great flask app
+>>>>>>> 353283c6a6fa4f0ca97d8a30e2ff70256aef4e5c
                     </div>
                     </div>
+              {% endfor %}
               </div>
-                            
-                  <img class="img-responsive img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="Alt Text">
               <div class="box-footer" style="display: block;">
                 <form action="/comment" method="POST">
+                 <img class="img-responsive img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="Alt Text">
                   <div class="img-push">
                       <input type="text" class="form-control input-sm" placeholder="Press enter to post comment" name="comment">
                   </div>
                 
                 </form>    
               </div>  
-                  <!--         Comment BOx Coding ENd-->
-          </div><!-- cARD END-->
-
+                  
+                  
+                  
+         
+<!--         Comment BOx Coding ENd-->
+ </div><!-- cARD END-->
                                  <!--  card 2-->
    {% for i in post %}
       <div class="card">
@@ -240,7 +257,8 @@
     </div><!-- cARD END-->
 
    {% endfor%} 
-   </div><!--COL M7 END-->
+  
+		</div><!--COL M6 END-->
 <!-- Right Column -->
 
    <div class="w3-col m3" style="margin-top:11px"> 
@@ -273,17 +291,19 @@
 	 
 </div>
 
-</div>
-</div>
 
+
+	</div>  <!--Row End -->
+	
+	</div><!--  container End -- >
 <!--  </div> -- >
 
 
-<!-- Footer start from here -->
-<footer class="page-footer font-small mdb-color lighten-3 pt-4"style="background-color:#666699; color:white;">
+  <!-- Footer start from here -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4" style="background-color:#666699; color:white;">
 
   <!-- Footer Links -->
-  <div class="container text-center text-md-left"style="background-color:#666699;">
+  <div class="container text-center text-md-left" style="background-color:#666699;">
 
     <!-- Grid row -->
     <div class="row">
@@ -374,7 +394,7 @@
 
         <!-- Facebook -->
         <a  href="" class="btn-floating btn-fb">
-          <i class='fab fa-facebook-square' style='font-size:48px;color: #0047ff'></i>
+          <i class="fab fa-facebook-square" style="font-size:48px;color: #0047ff"></i>
         </a>
         <!-- Twitter -->
         <a  href="" class="btn-floating ">
