@@ -13,14 +13,24 @@ firebase = pyrebase.initialize_app(config)
 
 db = firebase.database()
 storage=firebase.storage()
-from flask import *
-
+import flask
+from flask import Flask , render_template
 app = Flask(__name__)
 
+
 @app.route("/")
+def hello():
+   new_post=db.child("names").get()
+   user=new_post.val()
+   l=user.key()
+   return l
+@app.route("/Taha")
 def Taha():
     return "Hello taha!"
-
-        
-        
-      
+@app.route("/Daniyal")
+def Daniyal():
+    return "Hello Daniyal"
+@app.route("/fahad")
+def fahad():
+    return "Hello fahad"
+app.run(debug=True)

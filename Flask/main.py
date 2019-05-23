@@ -80,7 +80,7 @@ def Taha():
 @app.route('/about', methods=['GET','POST'])
 def about():
 	return render_template('about.html')
-app.run(debug=True)
+
 
 @app.route('/event', methods=['GET','POST'])
 def event():
