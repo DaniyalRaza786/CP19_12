@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="{{url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
 	
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
 
@@ -127,8 +127,9 @@
               <div class="status-bar">
             <ul   class="like-com ul1">
             <li>
-              <a href="#"><i class="la la-heart "></i><img class="img-like" src="{{url_for('static',filename='pic/heart.png')}}" alt=""> Like</a>
-              <span>25</span>
+              <!--<a href="#"><i class="la la-heart "></i><img class="img-like" src="{{url_for('static',filename='pic/heart.png')}}" alt=""> Like</a>-->
+              <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+              <!--<span>25</span>-->
             </li> 
             <li><a href="#" title="" class="com "><img class="img-like" src="{{url_for('static',filename='pic/commit.png')}}" alt=""> Comment</a></li>
             </ul>
@@ -143,7 +144,7 @@
                     <div class="comment-text">
                     <span class="username">
                       Taha
-                    <span class="text-muted pull-right">8:03 PM Today</span>
+                    <span class="text-muted pull-right"></span>
                     </span>
 
                       Beautiful
@@ -154,13 +155,13 @@
                     </div>
                     
                 
-              {% for j in new_comment_post1 %}
+              {% for j in img_comment_post1 %}
                     <div class="box-comment">
                     <img class="img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="User Image">
                     <div class="comment-text">
                     <span class="username">
                     Daniyal Raza
-                    <span class="text-muted pull-right">8:03 PM Today</span>
+                    <span class="text-muted pull-right"></span>
                     </span>
 
                   {{j}}
@@ -172,10 +173,10 @@
               {% endfor %}
               </div>
               <div class="box-footer" style="display: block;">
-                <form action="/comment" method="POST">
+                <form action="/image_comment" method="POST">
                  <img class="img-responsive img-circle img-sm" src="{{url_for('static',filename='pic/1.jpg')}}" alt="Alt Text">
                   <div class="img-push">
-                      <input type="text" class="form-control input-sm" placeholder="Press enter to post comment" name="comment">
+                      <input type="text" class="form-control input-sm" placeholder="Press enter to post comment" name="img_comment">
                   </div>
                 
                 </form>    
@@ -204,8 +205,9 @@
         <div class="status-bar">
       <ul   class="like-com ul1">
       <li>
-        <a href="#"><i class="la la-heart"></i><img class="img-like" src="{{url_for('static',filename='pic/heart.png')}}" alt=""> Like</a>
-        <span>25</span>
+        <!--<a href="#"><i class="la la-heart"></i><img class="img-like" src="{{url_for('static',filename='pic/heart.png')}}" alt="">Like</a>--> 
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        <!--<span>25</span>-->
       </li> 
       <li><a href="#" title="" class="com"><img class="img-like" src="{{url_for('static',filename='pic/commit.png')}}" alt=""> Comment</a></li>
       </ul>
@@ -220,7 +222,7 @@
               <div class="comment-text">
               <span class="username">
                 Taha
-              <span class="text-muted pull-right">8:03 PM Today</span>
+              <span class="text-muted pull-right"></span>
               </span>
                 NICE
               </div>
@@ -232,7 +234,7 @@
               <div class="comment-text">
               <span class="username">
               Daniyal Raza
-              <span class="text-muted pull-right">8:03 PM Today</span>
+              <span class="text-muted pull-right"></span>
               </span>
             {{j}}
               </div>
@@ -428,7 +430,12 @@
 
 
 
-
+<script>
+  function myFunction(x) {
+    x.classList.toggle("fa-thumbs-down");
+  }
+  </script>
+  
 
 
 

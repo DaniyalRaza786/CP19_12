@@ -278,7 +278,6 @@ background-color: #666699;
 a{
 	color:#666699;
 }
-<<<<<<< HEAD
 body,h1 {font-family: Verdana, sans-serif}
 
 body, html {height: 100%}
@@ -287,11 +286,19 @@ body, html {height: 100%}
   background-image:url('pic/come.jpg');
   min-height: 100%;
   background-position: center;
-  background-size: cover;
-=======
+  background-size: cover;}
 .navbar a:hover {
 	color:black;
->>>>>>> ec72ece3a8adeb667de461cc09a90e965efecf1e
+}
+
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
 }
 	
 	

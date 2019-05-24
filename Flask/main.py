@@ -26,7 +26,9 @@ def hello():
     link=storage.child("image/new2.jpg").get_url(None)
     new_comment=db.child("comment").get()
     new_comment_post=new_comment.val()
-    return render_template('Home.html',post=new.values(),l=link,new_comment_post1=new_comment_post.values())  
+    img_comment=db.child("img_comment").get()
+    img_comment_post=img_comment.val()
+    return render_template('Home.html',post=new.values(),l=link,img_comment_post1=img_comment_post.values(),new_comment_post1=new_comment_post.values())  
 @app.route('/post', methods=['GET','POST'])
 def post():
     if request.method=='POST':
@@ -43,7 +45,9 @@ def post():
         link=storage.child("image/new2.jpg").get_url(None)
         new_comment=db.child("comment").get()
         new_comment_post=new_comment.val()
-        return render_template('Home.html',post=new.values(),l=link,new_comment_post1=new_comment_post.values())  
+        img_comment=db.child("img_comment").get()
+        img_comment_post=img_comment.val()
+        return render_template('Home.html',post=new.values(),l=link,img_comment_post1=img_comment_post.values(),new_comment_post1=new_comment_post.values())   
 @app.route('/comment', methods=['GET','POST'])
 def comments():
     if request.method=='POST':
@@ -57,7 +61,25 @@ def comments():
         link=storage.child("image/new2.jpg").get_url(None)
         new_comment=db.child("comment").get()
         new_comment_post=new_comment.val()
-        return render_template('Home.html',post=new.values(),l=link,new_comment_post1=new_comment_post.values())  
+        img_comment=db.child("img_comment").get()
+        img_comment_post=img_comment.val()
+        return render_template('Home.html',post=new.values(),l=link,img_comment_post1=img_comment_post.values(),new_comment_post1=new_comment_post.values())   
+@app.route('/image_comment', methods=['GET','POST'])
+def img_comments():
+    if request.method=='POST':
+        comment=request.form['img_comment']
+        if comment != "":
+            
+            db.child("img_comment").push(comment)
+              
+        new_post=db.child("new_post").get()
+        new=new_post.val()
+        link=storage.child("image/new2.jpg").get_url(None)
+        img_comment=db.child("img_comment").get()
+        img_comment_post=img_comment.val()
+        new_comment=db.child("comment").get()
+        new_comment_post=new_comment.val()
+        return render_template('Home.html',post=new.values(),l=link,img_comment_post1=img_comment_post.values(),new_comment_post1=new_comment_post.values()) 
 
 @app.route('/image', methods=['GET','POST'])
 def image():
@@ -71,7 +93,9 @@ def image():
         link=storage.child("image/new2.jpg").get_url(None)
         new_comment=db.child("comment").get()
         new_comment_post=new_comment.val()
-        return render_template('Home.html',post=new.values(),l=link,new_comment_post1=new_comment_post.values())
+        img_comment=db.child("img_comment").get()
+        img_comment_post=img_comment.val()
+        return render_template('Home.html',post=new.values(),l=link,img_comment_post1=img_comment_post.values(),new_comment_post1=new_comment_post.values() ) 
     
 @app.route("/Taha")
 def Taha():
